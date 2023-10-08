@@ -78,6 +78,10 @@ other machines as necessary.
 * [Guide by durdn](https://www.atlassian.com/git/tutorials/dotfiles)
 * [Hacker News thread](https://news.ycombinator.com/item?id=11071754)
 
+### Configs
+
+* [wezterm](https://wezfurlong.org/wezterm/config/files.html)
+
 ## License
 
 The code in this repo builds on various open source resources which I have tried to
