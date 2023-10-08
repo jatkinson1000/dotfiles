@@ -62,20 +62,29 @@ dotfiles push
 
 ## Installation to a new machine
 
-### References
+### Additional steps
 
-#### General setup
+After installing these dotfiles you will also need to set up passwords through
+[`pass`](https://www.passwordstore.org/). This has not been included in this repo for
+obvious reasons.
+
+You will also need to set up ssh/gpg keys for the machine and add the public keys to any
+other machines as necessary.
+
+## References
+
+### General setup
 
 * [Guide by durdn](https://www.atlassian.com/git/tutorials/dotfiles)
 * [Hacker News thread](https://news.ycombinator.com/item?id=11071754)
 
-### License
+## License
 
 The code in this repo builds on various open source resources which I have tried to
 include above.
 In the spirit of FOSS it is available for others to use under [GPL-3.0](/.dotfiles/LICENSE).
 
-### Contributions and support
+## Contributions and support
 
 If you find a better way of doing something than what I have done here please consider
 [opening an issue](https://github.com/jatkinson1000/dotfiles/issues) or a pull request.
