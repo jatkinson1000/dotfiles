@@ -2,7 +2,8 @@
 
 [https://www.youtube.com/watch?v=fn1R-5p_j5c](https://www.youtube.com/watch?v=fn1R-5p_j5c)
 
-This repository is for @jatkinson1000's dotfiles for personal configuration of machines.
+This repository is for [@jatkinson1000](https://github.com/jatkinson1000)'s dotfiles
+for personal configuration of machines.
 
 The setup is heavily based on [this guide by durdn](https://www.atlassian.com/git/tutorials/dotfiles)
 which is, itself, based on a [Hacker News thread](https://news.ycombinator.com/item?id=11071754).
@@ -16,9 +17,10 @@ they can be hard to interpret if you want to build on them.
 ## Contents
 
 * `.dotfiles/` - The main git repo and any files I don't want to appear in $HOME
-  * `README.md` - description of how to set up and maintain this system.
   * `LICENSE` - license for this repository
   * `.software_list` - list of software to install to ensure dotfiles operate correctly
+* `.github` - directory to allow github to detect the README
+  * `README.md` - description of how to set up and maintain this system.
 
 ## Branches
 
@@ -83,4 +85,4 @@ more generally, follows the guidelines articulated in the
 [Python Community Code of Conduct](https://www.python.org/psf/codeofconduct/).
 
 If you have found this repo useful, and can afford to do so, please consider
-[buyin me a coffee](https://www.buymeacoffee.com/jackatkinsr).
+[buying me a coffee](https://www.buymeacoffee.com/jackatkinsr).
