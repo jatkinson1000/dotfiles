@@ -1,0 +1,84 @@
+# vim: filetype=muttrc
+
+# https://gideonwolfe.com/posts/workflow/neomutt/intro/
+
+# editor - set to neovim
+set editor = "nvim"
+
+set real_name = "Jack Atkinson"
+
+set date_format = "%Y-%m-%d %H:%M"
+
+
+#================================================
+# Main options
+#================================================
+set beep_new        # bell on new emails
+set timeout = 300   # If mutt not active how long until checking again
+set mail_check = 60 # How often to check for new email when active
+
+
+#================================================
+# Index options
+#================================================
+# Set the format of the index entries
+set index_format = "%4C %Z %[%b %d %H:%M] %?M?%-15.15L[%2M]&%-19.19L? (%?l?%4l&%4c?) %s"
+set flag_chars = "*!Dd<O●o◉- "  # Set the flags for marking messages
+set mark_old = no  # No distinction between unread types (new/marked)
+
+set use_threads = threads  # Group into threads
+set sort = reverse-last-date  # sort by date
+set sort_aux = "reverse-last-date-received"  # Sort subtheads by one with latest message
+
+
+#================================================
+# Status bar
+#================================================
+set status_chars = "-$%A"
+set status_format = "NeoMutt: %D -%r- [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]----%>-(%P)---"
+
+
+#================================================
+# Sidebar
+#================================================
+set sidebar_visible
+set sidebar_width = 25
+set sidebar_format = "%B%* %?N?%N/?%S"  # Mailbox-name, No.Unread(if-any-unread)/No.Messages
+
+
+#================================================
+# Reading messages panel
+#================================================
+auto_view text/html  # Convert html to plaintext
+alternative_order text/plain text/html  # display plaintext in preference to html
+set mailcap_path   = ~/.config/neomutt/mailcap.mutt
+
+
+#================================================
+# Composing messages
+#================================================
+# set fast_reply    # skip to compose when replying
+set askcc           # ask for CC:
+set edit_headers    # show headers when composing
+set forward_format = "Fwd: %s"
+# set forward_decode # decode when forwarding
+set attribution = "Verily on %d, %n proclaimed:"
+#set reply_to
+set reverse_name    # reply as whoever it was sent to
+set include         # include message in replies
+set forward_quote   # include message in forwards
+set text_flowed=yes # flowed text rules for hard (\n) and soft ( \n)
+unset sig_dashes    # no dashes before signature
+# unset help          # no help bar at top of index
+
+
+#================================================
+# Searching and virtual mailboxes
+#================================================
+#set spool_file=yes
+#set folder=notmuch-root-folder
+#source ~/.mailboxes
+
+
+set ssl_force_tls=yes
+

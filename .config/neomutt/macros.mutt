@@ -1,0 +1,13 @@
+# vim: filetype=muttrc
+     
+# macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+
+# Process urls 
+#macro index,pager \cb "<enter-command> set my_pdsave=\$pipe_decode<enter>\
+#<enter-command> unset pipe_decode<enter>\
+#<pipe-message>extract_url<enter>\
+#<enter-command> set pipe_decode=\$my_pdsave<enter>" "get URLs"
+
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"

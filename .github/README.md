@@ -62,14 +62,32 @@ dotfiles push
 
 ## Installation to a new machine
 
+### Decrypt private files
+
+The following files need decrypting:
+```bash
+gpg --decrypt .config/neomutt/aliases.mutt.asc > .config/neomutt/aliases.mutt
+gpg --decrypt .config/neomutt/acounts/gmail-local.asc > .config/neomutt/accounts/gmail-local
+gpg --decrypt .config/mbsync.asc > .config/mbsync
+```
+Remember to re-encrypt them if you ever want to push back up any changes.
+
 ### Additional steps
 
 After installing these dotfiles you will also need to set up passwords through
 [`pass`](https://www.passwordstore.org/). This has not been included in this repo for
 obvious reasons.
 
-You will also need to set up ssh/gpg keys for the machine and add the public keys to any
-other machines as necessary.
+You will also need to set up and/or import ssh/gpg keys for the machine and add the
+public keys to any other machines as necessary.
+
+You will need to enable the systemd jobs for mail updates and syncing:
+```bash
+systemctl daemon-reload
+systemctl enable --user mbsync.service
+```
+if doing so, consider extending the gpg timeout in `.gnupg/gpg-agent.conf`,
+or stopping the systemd service when you don't want to be disturbed.
 
 ## References
 
@@ -77,6 +95,10 @@ other machines as necessary.
 
 * [Guide by durdn](https://www.atlassian.com/git/tutorials/dotfiles)
 * [Hacker News thread](https://news.ycombinator.com/item?id=11071754)
+
+### Neomutt
+
+* [Neomutt workflow](https://gideonwolfe.com/posts/workflow/neomutt/intro/)
 
 ### Configs
 

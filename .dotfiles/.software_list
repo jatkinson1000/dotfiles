@@ -6,6 +6,16 @@ https://neovim.io/
 
 mail: neomutt
 https://neomutt.org/
+also needs: isync, gpg
 
 browser: librewolf
 https://librewolf.net/
+
+password manager: pass
+https://www.passwordstore.org/
+
+language servers
+pyright
+fortls
+lua_language_server
+mutt-language-server

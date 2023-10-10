@@ -1,0 +1,9 @@
+[Unit]
+Description=Mailbox synchronisation service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mbsync -Va -c .config/mbsyncrc
+
+[Install]
+WantedBy=default.target

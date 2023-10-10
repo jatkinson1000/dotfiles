@@ -1,0 +1,13 @@
+# Core setup
+# https://manpages.ubuntu.com/manpages/bionic/man5/neomuttrc.5.html
+source ~/.config/neomutt/settings.mutt  # main settings
+source ~/.config/neomutt/colors.mutt    # set color scheme
+source ~/.config/neomutt/mappings.mutt  # set key mappings
+source ~/.config/neomutt/macros.mutt    # set macros
+source ~/.config/neomutt/aliases.mutt   # set aliases
+# source "gpg --decrypt --quiet ~/.config/neomutt/aliases.mutt |"   # set aliases from gpg encrypted file
+set alias_file=~/.config/neomutt/aliases.mutt
+
+# Import details for gmail account
+source ~/.config/neomutt/accounts/gmail-local
+folder-hook $folder 'source ~/.config/neomutt/accounts/gmail-local'

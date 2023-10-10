@@ -1,0 +1,42 @@
+# vim: filetype=muttrc
+
+#: settings for mono terminals
+mono bold bold
+mono underline underline
+mono indicator reverse
+mono error bold
+
+#================================================
+# Index
+#================================================
+#: Highlight selected message:
+color indicator color88 color66
+#: generic messages:
+color index default default '.*'  # text, bg, matching regex
+color index_author magenta default '.*'
+color index_date cyan default
+
+#: Collapsed threads:
+#:   - All threads:
+color index color67 default "~v"
+#:   - No New or flagged:
+# color index white default "~v~(!~N)~(!~F)"
+#:   - flagged but no new
+# color index red     default "~v~(~F)~(!~N)"
+#:   - collapsed with new
+# color index white default "~v~(~N)"
+
+
+#================================================
+# Message reading panel
+#================================================
+#: message headers colors:
+color hdrdefault blue default
+color header brightcyan default "^(Date)"
+color header brightyellow default "^(From)"
+color header brightmagenta default "^(To)"
+color header brightblue default "^(CC|BCC|Cc|Bcc)"
+color header brightcyan default "^(Subject)"
+
+# message body colors
+color quoted cyan default

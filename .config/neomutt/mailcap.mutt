@@ -1,0 +1,13 @@
+# Information on how to handle non-text files
+
+# html
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+
+# word
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
+
+# Open doc
+application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
+
+# pdf
+application/pdf; pdftotext -layout %s -; copiousoutput;
