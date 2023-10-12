@@ -18,6 +18,8 @@ HISTCONTROL=ignoredups
 EDITOR=/usr/bin/vim
 # BROWSER=/usr/bin/librewolf
 
+export VIMINIT="source ~/.config/vim/vimrc"
+
 # -- ALIASES --
 # Get bash completions - should be autoloaded
 # source /usr/share/bash-completion/bash_completion
