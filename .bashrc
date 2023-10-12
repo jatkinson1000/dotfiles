@@ -21,6 +21,8 @@ export EDITOR="$VISUAL"
 
 export VIMINIT="source ~/.config/vim/vimrc"
 
+export VIMINIT="source ~/.config/vim/vimrc"
+
 # -- ALIASES --
 # Get bash completions - should be autoloaded
 # source /usr/share/bash-completion/bash_completion
