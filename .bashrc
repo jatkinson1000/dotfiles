@@ -20,6 +20,8 @@ export VISUAL=/usr/bin/vim
 export EDITOR="$VISUAL"
 # BROWSER=/usr/bin/librewolf
 
+export VIMINIT="source ~/.config/vim/vimrc"
+
 # -- ALIASES --
 # Get bash completions - should be autoloaded
 # source /usr/share/bash-completion/bash_completion
