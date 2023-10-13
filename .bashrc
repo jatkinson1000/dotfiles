@@ -8,17 +8,18 @@
 # -- BASH PARAMETERS --
 
 # Set bash prompt
-PS1='[\u@\h \W]\$ '
+export PS1='[\u@\h \W]\$ '
 
 # Set parameters for bash-history
-HISTSIZE=10000 
-HISTCONTROL=ignoredups
+export HISTSIZE=10000 
+export HISTCONTROL=ignoredups
 
 # Set default programs
-EDITOR=/usr/bin/vim
-# BROWSER=/usr/bin/librewolf
+export VISUAL=/usr/bin/nvim
+export EDITOR="$VISUAL"
+export BROWSER=/usr/bin/librewolf
 
-export VIMINIT="source ~/.config/vim/vimrc"
+# Set other shell variables
 
 # -- ALIASES --
 # Get bash completions - should be autoloaded
@@ -27,6 +28,9 @@ export VIMINIT="source ~/.config/vim/vimrc"
 # Set useful aesthetic aliases
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
+
+# Custom viminit location, but don't conflict with Neovim
+alias vim='vim -u ~/.config/vim/vimrc'
 
 # Set up alias for controlling dotfiles via git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
