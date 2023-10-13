@@ -8,15 +8,18 @@
 # -- BASH PARAMETERS --
 
 # Set bash prompt
-PS1='[\u@\h \W]\$ '
+export PS1='[\u@\h \W]\$ '
 
 # Set parameters for bash-history
-HISTSIZE=10000 
-HISTCONTROL=ignoredups
+export HISTSIZE=10000 
+export HISTCONTROL=ignoredups
 
 # Set default programs
-EDITOR=/usr/bin/nvim
-BROWSER=/usr/bin/librewolf
+export VISUAL=/usr/bin/nvim
+export EDITOR="$VISUAL"
+export BROWSER=/usr/bin/librewolf
+
+# Set other shell variables
 
 # -- ALIASES --
 # Get bash completions - should be autoloaded
