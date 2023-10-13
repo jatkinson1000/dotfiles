@@ -15,10 +15,9 @@ export HISTSIZE=10000
 export HISTCONTROL=ignoredups
 
 # Set default programs
-
 export VISUAL=/usr/bin/vim
 export EDITOR="$VISUAL"
-# BROWSER=/usr/bin/librewolf
+# export BROWSER=/usr/bin/librewolf
 
 export VIMINIT="source ~/.config/vim/vimrc"
 
