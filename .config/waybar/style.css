@@ -1,0 +1,129 @@
+/* ************ */
+/* APPLY TO ALL */
+/* ************ */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* *********** */
+/* MAIN WINDOW */
+/* *********** */
+window#waybar {
+    background: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: white;
+}
+
+/* ************* */
+/* MODULE BLOCKS */
+/* ************* */
+.modules-left {
+}
+.modules-center {
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0px 10px;
+}
+.modules-right {
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 0px 10px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+/* ************ */
+/*  WORKSPACES  */
+/* ************ */
+#workspaces button {
+    padding: 0;
+    background: transparent;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+
+#workspaces button.focused {
+    padding: 0 5px;
+    background: #64727D;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+/* ****************** */
+/* INDIVIDUAL WIDGETS */
+/* ****************** */
+#mode, #clock, #idle_inhibitor, #battery, #temperature,
+#keyboard-state, #network, #cpu, #memory, #backlight,
+#pulseaudio {
+    padding: 0 5px;
+    border-right: 1px white solid;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock {
+    background-color: #64727D;
+    font-weight: bold;
+    border: none
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+}
+
+#battery.charging {
+    background-color: #26A65B;
+    color: white;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
