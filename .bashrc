@@ -3,7 +3,7 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
 
 # -- BASH PARAMETERS --
 
@@ -34,8 +34,7 @@ alias vim='vim -u ~/.config/vim/vimrc'
 
 # Set up alias for controlling dotfiles via git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-_completion_loader git
-$(complete -p git | sed 's/ git//') dotfiles
+# _completion_loader git
+# $(complete -p git | sed 's/ git//') dotfiles
 
 # Other machine specific aliases
-alias wlsunset='wlsunset -l 52.2 -L 0.1 -t 2000 &'
