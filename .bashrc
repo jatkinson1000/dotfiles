@@ -15,9 +15,9 @@ export HISTSIZE=10000
 export HISTCONTROL=ignoredups
 
 # Set default programs
-export VISUAL=/usr/bin/nvim
+export VISUAL=/usr/bin/vim
 export EDITOR="$VISUAL"
-export BROWSER=/usr/bin/librewolf
+# export BROWSER=/usr/bin/librewolf
 
 # Set other shell variables
 
