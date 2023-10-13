@@ -1,0 +1,7 @@
+" Set runtimepath to nonstandard location under ~/.config/
+set runtimepath^=~/.config/vim
+"let &packpath=&runtimepath
+
+" Source individual config files
+source ~/.config/vim/setup.vim
+source ~/.config/vim/plugins.vim

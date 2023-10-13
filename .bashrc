@@ -26,6 +26,9 @@ BROWSER=/usr/bin/librewolf
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 
+# Custom viminit location, but don't conflict with Neovim
+alias vim='vim -u ~/.config/vim/vimrc'
+
 # Set up alias for controlling dotfiles via git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 _completion_loader git
