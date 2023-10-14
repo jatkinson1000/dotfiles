@@ -6,7 +6,7 @@ https://neovim.io/
 
 mail: neomutt
 https://neomutt.org/
-also needs: isync, gpg
+also needs: isync, goimapnotify, msmtp, gpg
 
 browser: librewolf
 https://librewolf.net/

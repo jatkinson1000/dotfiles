@@ -1,0 +1,13 @@
+{
+  "host": "imap.gmail.com",
+  "port": 993,
+  "tls": true,
+  "tlsOptions": {
+    "rejectUnauthorized": false
+  },
+  "username": "<myaddress>@gmail.com",
+  "passwordCmd": "pass <my-local-app-gmail-password> | head -1",
+  "onNewMail": "mbsync -c .config/mbsyncrc gmail",
+  "onNewMailPost": "",
+  "boxes": [ "INBOX" ]
+}

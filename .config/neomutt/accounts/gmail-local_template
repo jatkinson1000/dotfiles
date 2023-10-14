@@ -1,0 +1,30 @@
+# Configure Internet Message Access Protocol for reading mail
+# Username and password for your Gmail or G Suite account
+set from="<myaddress>@gmail.com"
+set my_address = "<myaddress>@gmail.com"
+
+# Type of mailbox
+set mbox_type = Maildir
+# Folder with emails
+set folder = "~/.mail/gmail"
+
+# Execute msmtp to send mail
+set sendmail = "msmtp -a gmail"
+
+# File that headers will be cached
+set header_cache = ~/.cache/mutt
+
+# Directory to poll for new mail
+set spoolfile = "+INBOX"
+# Location of other folders
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+set trash = "+[Gmail]/Bin"
+set copy=no  # Disable saving outgoing mail since Gmail saves them by default.
+
+mailboxes ! $record $postponed $trash
+
+# set message_cachedir = ~/.mutt/cache/bodies# Disable saving outgoing mail since Gmail saves them by default. set record = ""
+
+# synchronization settings ['s' to sync]
+macro index s "<shell-escape>mbsync -q -c .config/mbsyncrc gmail<enter>" "sync email"

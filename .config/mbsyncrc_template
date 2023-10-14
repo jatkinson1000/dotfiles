@@ -1,0 +1,23 @@
+IMAPStore gmail-remote
+Host imap.gmail.com
+SSLType IMAPS
+AuthMechs LOGIN
+User <myaddress>@gmail.com
+PassCmd "pass <my-local-app-password-name>"
+
+MaildirStore gmail-local
+Subfolders Verbatim
+Path ~/.mail/gmail/
+Inbox ~/.mail/gmail/INBOX
+
+Channel gmail
+Far :gmail-remote:
+Near :gmail-local:
+# Auto-create missing mailboxes here and on server
+Create Both
+# Sync message movement and deletions
+Expunge Both
+# Exclude everything under [Gmail], except those specified
+Patterns * !"[Gmail]" "[Gmail]/All Mail" "[Gmail]/Sent" "[Gmail]/Drafts" "[Gmail]/Bin"
+# Save synchronisation files
+SyncState *

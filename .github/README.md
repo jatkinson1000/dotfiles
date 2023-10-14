@@ -69,6 +69,7 @@ The following files need decrypting:
 gpg --decrypt .config/neomutt/aliases.mutt.asc > .config/neomutt/aliases.mutt
 gpg --decrypt .config/neomutt/acounts/gmail-local.asc > .config/neomutt/accounts/gmail-local
 gpg --decrypt .config/mbsync.asc > .config/mbsync
+gpg --decrypt .config/msmtp/config.asc > .config/msmtp/config
 ```
 Remember to re-encrypt them if you ever want to push back up any changes.
 
@@ -85,9 +86,14 @@ You will need to enable the systemd jobs for mail updates and syncing:
 ```bash
 systemctl daemon-reload
 systemctl enable --user mbsync.service
+systemctl start --user mbsync.service
+systemctl enable --user goimapnotify@gmail.service
+systemctl start --user goimapnotify@gmail.service
 ```
 if doing so, consider extending the gpg timeout in `.gnupg/gpg-agent.conf`,
 or stopping the systemd service when you don't want to be disturbed.
+
+If you cannot send mail automatically you may need to `chmod 600 .config/msmtp/config`.
 
 ## References
 
@@ -98,7 +104,9 @@ or stopping the systemd service when you don't want to be disturbed.
 
 ### Neomutt
 
-* [Neomutt workflow](https://gideonwolfe.com/posts/workflow/neomutt/intro/)
+* [Neomutt workflow - blog post](https://gideonwolfe.com/posts/workflow/neomutt/intro/)
+* [Neomutt, mbsync, msmtp, notmuch - blog post](https://blog.flaport.net/configuring-neomutt-for-email.html)
+* [imapnotify for push notifications - Arch page](https://wiki.archlinux.org/title/Isync)
 
 ### Configs
 
