@@ -70,7 +70,7 @@ tooltip label {
 /* ****************** */
 /* INDIVIDUAL WIDGETS */
 /* ****************** */
-#mode, #clock, #idle_inhibitor, #battery, #temperature,
+#mode, #clock, #custom-weather, #idle_inhibitor, #battery, #temperature,
 #keyboard-state, #network, #cpu, #memory, #backlight,
 #pulseaudio {
     padding: 0 5px;
@@ -86,6 +86,9 @@ tooltip label {
     background-color: #64727D;
     font-weight: bold;
     border: none
+}
+
+#custom-weather {
 }
 
 #battery {

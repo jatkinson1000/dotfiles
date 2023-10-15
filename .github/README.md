@@ -93,7 +93,8 @@ systemctl start --user goimapnotify@gmail.service
 if doing so, consider extending the gpg timeout in `.gnupg/gpg-agent.conf`,
 or stopping the systemd service when you don't want to be disturbed.
 
-If you cannot send mail automatically you may need to `chmod 600 .config/msmtp/config`.
+If you cannot send mail automatically you may need to `chmod 600 .config/msmtp/config`.  
+Similarly for weather in waybar you may need to `chmod +x .config/waybar/scripts/weather.py`.
 
 ## References
 
