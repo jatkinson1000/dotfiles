@@ -35,8 +35,9 @@ config.cursor_blink_rate = 800
 
 config.window_background_opacity = 0.75
 
--- Temporary fix for crashing when multiple windows opened. See https://github.com/wez/wezterm/issues/5103
-config.front_end = 'WebGpu'
+-- Map option/alt keys so left has composition effects (AltGr) and right does not
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = false
 
 -- and finally, return the configuration to wezterm
 return config
