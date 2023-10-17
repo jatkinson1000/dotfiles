@@ -1,3 +1,6 @@
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # -- GENERAL ZSH SETTINGS --
 # Load zsh autocompletion and prompts
 autoload -Uz compinit promptinit
@@ -13,9 +16,9 @@ export HISTSIZE=10000
 setopt HIST_IGNORE_DUPS
 
 # Set default programs (but restore emacs shell bindings)
-export VISUAL=/usr/bin/nvim
+export VISUAL=/opt/homebrew/bin/nvim
 export EDITOR="$VISUAL"
-export BROWSER=/usr/bin/librewolf
+export BROWSER=/opt/homebrew/bin/librewolf
 bindkey -e
 
 # Set TTY for GPG passkey prompting
@@ -37,6 +40,15 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 unsetopt completealiases
 
 # -- OTHER PROGRAM SETTINGS --
+# Add shell completions to zsh for brew packages
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # Add fuzzyfinder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
