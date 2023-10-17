@@ -39,6 +39,19 @@ alias vim='vim -u ~/.config/vim/vimrc'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 unsetopt completealiases
 
+# -- FUNCTIONS --
+# Get non-password value from pass (adapted from dbrumbaugh)
+# e.g. `show-pass-value github username`
+show-pass-val () {
+  if [[ "$#" == 1 ]]; then
+    # If no extra args then print password
+    pass $1 | head -1
+  else
+    # search for $2 after ": " and print
+    pass $1 | awk -F ": " "/$2/"'{print $2}'
+  fi
+}
+
 # -- OTHER PROGRAM SETTINGS --
 # Add shell completions to zsh for brew packages
 if type brew &>/dev/null
