@@ -39,3 +39,18 @@ $(complete -p git | sed 's/ git//') dotfiles
 
 # Other machine specific aliases
 alias wlsunset='wlsunset -l 52.2 -L 0.1 -t 2000 &'
+
+# -- FUNCTIONS --
+# Get non-password value from pass (adapted from dbrumbaugh)
+# e.g. `show-pass-value github username`
+show-pass-val () {
+  if [[ "$#" == 1 ]]; then
+    # If no extra args then print password
+    pass $1 | head -1
+  else
+    # search for $2 after ": " and print
+    pass $1 | awk -F ": " "/$2/"'{print $2}'
+  fi
+}
+_completion_loader pass
+$(complete -p pass | sed 's/ pass//') show-pass-val
