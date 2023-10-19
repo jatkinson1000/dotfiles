@@ -13,7 +13,6 @@ set ttyfast           " Speed up scrolling in Vim
 set number            " add line numbers
 set cc=88             " set a column border for good coding style
 " set termguicolors     " better colours
-set breakindent       " Apply indent to wrapped lines
 
 " STATUSLINE "
 " This is now handled in a separate file statusline.vim
@@ -37,9 +36,7 @@ set incsearch              " incremental search
 
 " MENU "
 set wildmenu               " show menu of completions
-set wildmode=full          " get bash-like tab completions
-" set wildmode = 'longest,list'  " get bash-like tab completions
-set wildoptions=fuzzy      " show menu above as fuzzy single line
+set wildoptions=tagfile    " show menu above as fuzzy single line
 
 " SYNTAX "
 " set spell                  " Set spellcheck on by default
