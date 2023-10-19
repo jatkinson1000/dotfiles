@@ -3,7 +3,7 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
 
 # -- BASH PARAMETERS --
 
@@ -15,9 +15,9 @@ export HISTSIZE=10000
 export HISTCONTROL=ignoredups
 
 # Set default programs
-export VISUAL=/usr/bin/nvim
+export VISUAL=/usr/bin/vim
 export EDITOR="$VISUAL"
-export BROWSER=/usr/bin/librewolf
+# export BROWSER=/usr/bin/librewolf
 
 # Set other shell variables
 
@@ -34,8 +34,8 @@ alias vim='vim -u ~/.config/vim/vimrc'
 
 # Set up alias for controlling dotfiles via git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-_completion_loader git
-$(complete -p git | sed 's/ git//') dotfiles
+# _completion_loader git
+# $(complete -p git | sed 's/ git//') dotfiles
 
 # Other machine specific aliases
 alias wlsunset='wlsunset -l 52.2 -L 0.1 -t 2000 &'
