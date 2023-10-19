@@ -26,6 +26,7 @@ they can be hard to interpret if you want to build on them.
 
 * `main` - Arch linux machine
 * `OSX` - Apple Silicon mac
+* `cheyenne` - Cheyenne HPC (NCAR)
 
 ## Fresh Setup
 
