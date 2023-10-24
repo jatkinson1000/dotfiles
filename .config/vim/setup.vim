@@ -33,7 +33,7 @@ set incsearch              " incremental search
 " set wildmode = 'longest,list'  " get bash-like tab completions
 set wildmode=full          " get bash-like tab completions
 set wildmenu               " show menu of completions
-set wildoptions=fuzzy      " show menu above as fuzzy single line
+" set wildoptions=fuzzy      " show menu above as fuzzy single line
 
 " SYNTAX "
 " set spell                  " Set spellcheck on by default
