@@ -7,6 +7,9 @@ set mouse=a
 
 set clipboard=unnamedplus
 
+" TYPING "
+set backspace=indent,eol,start  " more powerful backspacing
+
 " APPEARANCE "
 set cursorline        " highlight current cursor line
 set ttyfast           " Speed up scrolling in Vim
