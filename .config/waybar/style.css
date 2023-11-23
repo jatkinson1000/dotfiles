@@ -4,7 +4,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0;
 }
@@ -83,8 +83,8 @@ tooltip label {
 }
 
 #clock {
-    background-color: #64727D;
     font-weight: bold;
+    font-family: monospace;
     border: none
 }
 
