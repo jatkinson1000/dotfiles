@@ -8,8 +8,7 @@ compinit
 promptinit
 # Set zsh prompt
 prompt redhat
-# Set completion menu to be navigable
-zstyle ':completion:*' menu select
+PS1='$ '
 
 # Set parameters for bash-history
 export HISTSIZE=10000 
@@ -23,14 +22,6 @@ bindkey -e
 
 # Set TTY for GPG passkey prompting
 export GPG_TTY=$(tty)
-
-# Set other shell variables
-export KAGGLE_CONFIG_DIR=~/.config/kaggle
-
-# -- ALIASES --
-# Set useful aesthetic aliases
-alias ls="ls --color"
-alias grep="grep --color"
 
 # Custom viminit location, but don't conflict with Neovim
 alias vim='vim -u ~/.config/vim/vimrc'
@@ -61,11 +52,3 @@ then
   autoload -Uz compinit
   compinit
 fi
-
-# Add fuzzyfinder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Add Walk
-function lk {
-  cd "$(walk "$@")"
-}
