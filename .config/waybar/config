@@ -1,13 +1,32 @@
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "layer": "bottom", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "custom/weather", "clock"],
+    "modules-left": [
+            "sway/workspaces"
+            // "sway/mode",
+            // "sway/scratchpad",
+            // "custom/media"
+    ],
+    "modules-center": [
+            "sway/window"
+    ],
+    "modules-right": [
+            "idle_inhibitor",
+            "pulseaudio",
+            "network",
+            "cpu",
+            "memory",
+            "temperature",
+            "backlight",
+            // "keyboard-state"
+            "battery",
+            "custom/weather",
+            "clock"
+    ],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -27,7 +46,7 @@
     },
     "keyboard-state": {
         "numlock": false,
-        "capslock": true,
+        "capslock": false,
         "format": {
             "numlock": "N {icon}",
             "capslock": "C {icon}" 
@@ -100,7 +119,7 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": true
     },
     "memory": {
         "format": "{}% "
@@ -116,7 +135,8 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": [""],
+        //"format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "interval": 60,
@@ -126,7 +146,7 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
