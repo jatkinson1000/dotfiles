@@ -26,6 +26,9 @@ they can be hard to interpret if you want to build on them.
 
 * `main` - Arch linux machine
 * `OSX` - Apple Silicon mac
+* `cheyenne` - Cheyenne HPC (NCAR)
+* `levante` - Levante HPC (DKRZ)
+* `carpentries` - Simplified profiles to use when teaching
 
 ## Fresh Setup
 
