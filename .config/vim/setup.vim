@@ -22,6 +22,9 @@ set expandtab              " converts tabs to white space
 set shiftwidth=2           " width for auto-indents
 set autoindent             " indent a new line the same amount as the line just typed
 
+" TYPING "
+set backspace=indent,eol,start  " more powerful backspacing
+
 " SEARCHING "
 set showmatch              " show matching brackets etc.
 set ignorecase             " case insensitive
