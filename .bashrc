@@ -21,6 +21,8 @@ export EDITOR="$VISUAL"
 export BROWSER=/usr/bin/librewolf
 
 # Set other shell variables
+# Source spack scripts
+. ~/spack/share/spack/setup-env.sh
 
 # -- ALIASES --
 # Get bash completions - should be autoloaded
