@@ -1,6 +1,7 @@
 # Set up a bare repo linked to remote
 git clone --bare git@github.com:jatkinson1000/dotfiles.git $HOME/.dotfiles
 
+shopt -s expand_aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles config --local status.showUntrackedFiles no
 
