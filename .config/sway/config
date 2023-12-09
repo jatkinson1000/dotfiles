@@ -45,7 +45,7 @@ workspace 8 output DP-4
 
 # Set window (client) options
 #                 border 	 backgnd 	text 	   indicatr child_border
-client.focused    #00DD00  #666666  #DDDDDD  #00FFFF  #00FF00
+client.focused    #00DD00  #666666  #DDDDDD  #00DD00  #00DD00
 client.unfocused 	#333333  #222222  #888888  #292d2e  #333333
 
 titlebar_border_thickness 2
