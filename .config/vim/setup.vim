@@ -7,9 +7,6 @@ set mouse=a
 
 set clipboard=unnamedplus
 
-" TYPING "
-set backspace=indent,eol,start  " more powerful backspacing
-
 " APPEARANCE "
 set cursorline        " highlight current cursor line
 set ttyfast           " Speed up scrolling in Vim
@@ -24,6 +21,9 @@ set softtabstop=2          " see multiple spaces as tab-stops so <BS> does the r
 set expandtab              " converts tabs to white space
 set shiftwidth=2           " width for auto-indents
 set autoindent             " indent a new line the same amount as the line just typed
+
+" TYPING "
+set backspace=indent,eol,start  " more powerful backspacing
 
 " SEARCHING "
 set showmatch              " show matching brackets etc.

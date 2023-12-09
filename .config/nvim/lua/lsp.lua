@@ -4,6 +4,7 @@ local lspconfig = require('lspconfig')
 lspconfig.fortls.setup{cmd={"fortls", "--notify_init", "--hover_signature", "--hover_language=fortran", "--use_signature_help"}}
 lspconfig.pyright.setup {}
 lspconfig.lua_ls.setup {}
+lspconfig.rust_analyzer.setup({})
 
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = { "muttrc*", "neomuttrc*", "*.mutt" },
