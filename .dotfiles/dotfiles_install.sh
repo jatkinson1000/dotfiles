@@ -14,7 +14,7 @@ else
   mkdir -p .dotfiles-backup
   # combine stderr and stdout | select whitespace followed by a dot | awk to print first arg | get 
   dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs dirname | xargs -I{} mkdir -p .dotfiles-backup/{}
-  dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfiles_backup/{}
+  dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfiles-backup/{}
 fi;
 
 dotfiles checkout
