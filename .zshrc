@@ -14,7 +14,7 @@ export SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_DUPS
 
 # Set default programs (but restore emacs shell bindings)
-export VISUAL=/usr/bin/nvim
+export VISUAL="$HOME/bin/bin/nvim"
 export EDITOR="$VISUAL"
 export BROWSER=/usr/bin/librewolf
 bindkey -e
