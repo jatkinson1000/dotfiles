@@ -2,6 +2,11 @@
 # ~/.bashrc
 #
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -16,13 +21,14 @@ export SAVEHIST=$HISTSIZE
 export HISTCONTROL=ignoredups
 
 # Set default programs
-export VISUAL=/usr/bin/nvim
+export VISUAL=/usr/bin/vim
 export EDITOR="$VISUAL"
 export BROWSER=/usr/bin/librewolf
+export GPG_TTY=$(tty)
 
 # Set other shell variables
 # Source spack scripts
-. ~/spack/share/spack/setup-env.sh
+. ~/hpc-work/spack/share/spack/setup-env.sh
 
 # -- ALIASES --
 # Get bash completions - should be autoloaded
@@ -44,18 +50,3 @@ $(complete -p git | sed 's/ git//') dotfiles
 alias wlsunset='wlsunset -l 52.2 -L 0.1 -t 2000 &'
 
 # -- FUNCTIONS --
-# Get non-password value from pass (adapted from dbrumbaugh)
-# e.g. `show-pass-value github username`
-show-pass-val () {
-  if [[ "$#" == 1 ]]; then
-    # If no extra args then print password
-    pass $1 | head -1
-  else
-    # search for $2 after ": " and print
-    pass $1 | awk -F ": " "/$2/"'{print $2}'
-  fi
-}
-_completion_loader pass
-$(complete -p pass | sed 's/ pass//') show-pass-val
-
-. "$HOME/.cargo/env"
