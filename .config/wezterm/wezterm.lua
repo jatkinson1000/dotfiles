@@ -11,6 +11,7 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
+config.font_size = 10.0
 
 -- Color scheme:
 -- config.color_scheme = 'AdventureTime'
