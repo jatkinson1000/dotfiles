@@ -34,6 +34,8 @@ alias ls='ls --color=auto'
 
 # Custom viminit location, but don't conflict with Neovim
 alias vim='vim -u ~/.config/vim/vimrc'
+# encourage tmux to start with colour
+alias tmux='export TERM=screen-256color; tmux'
 
 # Set up alias for controlling dotfiles via git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
