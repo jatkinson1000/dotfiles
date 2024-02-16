@@ -12,7 +12,7 @@ set cursorline        " highlight current cursor line
 set ttyfast           " Speed up scrolling in Vim
 set number            " add line numbers
 set cc=88             " set a column border for good coding style
-" set termguicolors     " better colours
+set termguicolors     " better colours
 
 " TABS "
 set tabstop=2              " number of columns occupied by a tab
