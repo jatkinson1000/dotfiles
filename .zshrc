@@ -72,3 +72,5 @@ function lk {
 }
 
 . "$HOME/.cargo/env"
+# Add zoxide (place this at end of zshrc)
+eval "$(zoxide init --cmd cd zsh)"
