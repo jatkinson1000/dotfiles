@@ -69,3 +69,6 @@ fi
 function lk {
   cd "$(walk "$@")"
 }
+
+# Add zoxide (place this at end of zshrc)
+eval "$(zoxide init --cmd cd zsh)"
