@@ -12,7 +12,7 @@ prompt redhat
 zstyle ':completion:*' menu select
 
 # Set parameters for bash-history
-export HISTSIZE=10000 
+export HISTSIZE=1000000
 setopt HIST_IGNORE_DUPS
 
 # Set default programs (but restore emacs shell bindings)
