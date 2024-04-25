@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 # -- BASH PARAMETERS --
+. "$HOME/.cargo/env"
 
 # Set bash prompt
 export PS1='[\u@\h \W]\$ '
