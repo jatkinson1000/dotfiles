@@ -32,6 +32,11 @@ Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})  -- TreeSitter
 
 Plug('rebelot/heirline.nvim')   -- Heirline for status line
 
+Plug('github/copilot.vim')
+Plug 'zbirenbaum/copilot.lua'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
+
 vim.call('plug#end')
 vim.opt.filetype = 'on'
 
@@ -41,6 +46,12 @@ vim.api.nvim_create_autocmd('VimEnter', {
   pattern = '*',
   command = "if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | source $MYVIMRC"
 })
+
+-- Set up copilot chat plugin options --
+require("CopilotChat").setup {
+  debug = true, -- Enable debugging
+  -- See Configuration section for rest
+}
 
 
 -- Check for and apply any updates to vim-plug (NB slows startup.) --
