@@ -35,7 +35,7 @@ Plug('rebelot/heirline.nvim')   -- Heirline for status line
 Plug('github/copilot.vim')
 Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
+Plug('CopilotC-Nvim/CopilotChat.nvim', { ['branch'] = 'canary' })
 
 vim.call('plug#end')
 vim.opt.filetype = 'on'
