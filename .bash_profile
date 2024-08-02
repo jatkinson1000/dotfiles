@@ -6,6 +6,8 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Add any necessary directories to $PATH
+PATH=$HOME/software/bin:$PATH:$HOME/bin
+export PATH
 
 # Run ssh-agent if necessary
 
