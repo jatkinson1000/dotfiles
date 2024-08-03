@@ -35,5 +35,8 @@ config.cursor_blink_rate = 800
 
 config.window_background_opacity = 0.75
 
+-- Temporary fix for crashing when multiple windows opened. See https://github.com/wez/wezterm/issues/5103
+config.front_end = 'WebGpu'
+
 -- and finally, return the configuration to wezterm
 return config
