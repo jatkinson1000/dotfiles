@@ -54,3 +54,5 @@ show-pass-val () {
 }
 _completion_loader pass
 $(complete -p pass | sed 's/ pass//') show-pass-val
+
+. "$HOME/.cargo/env"
