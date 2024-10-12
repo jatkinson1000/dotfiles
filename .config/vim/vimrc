@@ -4,4 +4,5 @@ set runtimepath^=~/.config/vim
 
 " Source individual config files
 source ~/.config/vim/setup.vim
+source ~/.config/vim/statusline.vim
 source ~/.config/vim/plugins.vim

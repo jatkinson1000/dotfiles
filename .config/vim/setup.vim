@@ -15,6 +15,9 @@ set cc=88             " set a column border for good coding style
 " set termguicolors     " better colours
 set breakindent       " Apply indent to wrapped lines
 
+" STATUSLINE "
+" This is now handled in a separate file statusline.vim
+
 " TABS "
 set tabstop=2              " number of columns occupied by a tab
 set softtabstop=2          " see multiple spaces as tab-stops so <BS> does the right thing
@@ -33,14 +36,14 @@ set hlsearch               " highlight search
 set incsearch              " incremental search
 
 " MENU "
-" set wildmode = 'longest,list'  " get bash-like tab completions
-set wildmode=full          " get bash-like tab completions
 set wildmenu               " show menu of completions
+set wildmode=full          " get bash-like tab completions
+" set wildmode = 'longest,list'  " get bash-like tab completions
 set wildoptions=fuzzy      " show menu above as fuzzy single line
 
 " SYNTAX "
 " set spell                  " Set spellcheck on by default
-filetype on                "
+filetype on                " When opening a file try to recognise the filetype
 filetype plugin on         " 
 filetype indent on         " allow auto-indenting depending on file type
 syntax enable              " syntax highlighting (enable to preserve colorscheme, on to override)
