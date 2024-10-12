@@ -186,6 +186,9 @@ bindsym $mod+r mode "resize"
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym Shift+XF86AudioRaiseVolume exec pactl set-source-volume @DEFAULT_SOURCE@ +5%
+    bindsym Shift+XF86AudioLowerVolume exec pactl set-source-volume @DEFAULT_SOURCE@ -5%
+    bindsym Shift+XF86AudioMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     bindsym XF86AudioPlay exec spt playback --toggle
     bindsym XF86AudioNext exec spt playback --next
     bindsym XF86AudioPrev exec spt playback --previous
