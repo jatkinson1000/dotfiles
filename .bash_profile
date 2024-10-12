@@ -8,3 +8,5 @@
 # Add any necessary directories to $PATH
 
 # Run ssh-agent if necessary
+
+. "$HOME/.cargo/env"

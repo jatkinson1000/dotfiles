@@ -57,3 +57,5 @@ show-pass-val () {
 function lk {
   cd "$(walk "$@")"
 }
+
+. "$HOME/.cargo/env"
