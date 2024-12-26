@@ -11,7 +11,8 @@
 export PS1='[\u@\h \W]\$ '
 
 # Set parameters for bash-history
-export HISTSIZE=10000 
+export HISTSIZE=1000000 
+export SAVEHIST=$HISTSIZE
 export HISTCONTROL=ignoredups
 
 # Set default programs
