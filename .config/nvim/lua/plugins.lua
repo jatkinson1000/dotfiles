@@ -32,10 +32,10 @@ Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})  -- TreeSitter
 
 Plug('rebelot/heirline.nvim')   -- Heirline for status line
 
-Plug('github/copilot.vim')
+Plug 'github/copilot.vim'
 Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
-Plug('CopilotC-Nvim/CopilotChat.nvim', { ['branch'] = 'canary' })
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
 
 vim.call('plug#end')
 vim.opt.filetype = 'on'
@@ -52,7 +52,13 @@ require("CopilotChat").setup {
   debug = true, -- Enable debugging
   -- See Configuration section for rest
 }
-
+-- Disable Copilot by default and map Ctrl + a + i to toggle
+vim.g.copilot_enabled = false
+function ToggleCopilot()
+  vim.g.copilot_enabled = not vim.g.copilot_enabled
+  print("Copilot " .. (vim.g.copilot_enabled and "enabled" or "disabled"))
+end
+vim.api.nvim_set_keymap('n', '<C-a><C-i>', ':lua ToggleCopilot()<CR>', { noremap = true, silent = true })
 
 -- Check for and apply any updates to vim-plug (NB slows startup.) --
 -- vim.api.nvim_command('PlugUpgrade')
