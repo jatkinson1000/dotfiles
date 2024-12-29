@@ -15,6 +15,9 @@ vim.opt.filetype = 'off'
 local Plug = vim.fn['plug#']     -- Shorthand for plug command
 vim.call('plug#begin', data_dir .. '/plugged')
 
+Plug 'rebelot/kanagawa.nvim'    -- colourschemes
+Plug 'EdenEast/nightfox.nvim'
+
 Plug 'neovim/nvim-lspconfig'    -- lsp plugins
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'

@@ -9,8 +9,13 @@ vim.opt.cursorline = true        -- highlight current cursor line
 vim.opt.ttyfast = true           -- Speed up scrolling in Vim
 vim.opt.number = true            -- add line numbers
 vim.opt.cc = '88'                -- set a column border for good coding style
--- vim.opt.termguicolors = true     -- better colours
 vim.opt.breakindent = true       -- Apply indent to wrapped lines
+
+-- COLORSCHEMES -- 
+vim.opt.termguicolors = true         -- better colours
+-- vim.cmd("colorscheme ron")           -- set colorscheme
+vim.cmd("colorscheme carbonfox")     -- set colorscheme
+-- vim.cmd("colorscheme kanagawa-wave") -- set colorscheme
 
 -- TABS --
 vim.opt.tabstop = 2              -- number of columns occupied by a tab
@@ -26,7 +31,6 @@ vim.opt.hlsearch = true          -- highlight search
 vim.opt.incsearch = true         -- incremental search
 
 -- MENU --
--- vim.opt.wildmode = 'longest,list'  -- get bash-like tab completions
 vim.opt.wildmode = 'full'        -- get bash-like tab completions
 vim.opt.wildmenu = true          -- show menu of completions
 vim.opt.wildoptions = 'fuzzy'    -- show menu above as fuzzy single line
@@ -36,5 +40,5 @@ vim.opt.wildoptions = 'fuzzy'    -- show menu above as fuzzy single line
 vim.opt.syntax = 'on'            -- syntax highlighting
 
 -- OTHER --
--- set noswapfile            " disable creating swap file
+-- set noswapfile             " disable creating swap file
 -- set backupdir=~/.cache/vim " Directory to store backup files.
