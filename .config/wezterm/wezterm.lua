@@ -12,10 +12,10 @@ end
 
 -- This is where you actually apply your config choices
 config.font = wezterm.font 'Maple Mono NF'
-config.font_size = 10.0
+config.font_size = 12.0
 
 -- Color scheme:
--- config.color_scheme = 'AdventureTime'
+-- config.color_scheme = 'Solarized Light (Gogh)'
 
 config.colors = {
     -- Default text color
@@ -34,7 +34,8 @@ config.colors = {
 
 config.cursor_blink_rate = 800
 
-config.window_background_opacity = 0.75
+-- config.window_background_opacity = 0.75
+config.window_background_opacity = 1.0
 
 -- Map option/alt keys so left has composition effects (AltGr) and right does not
 config.send_composed_key_when_left_alt_is_pressed = true
