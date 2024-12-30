@@ -11,10 +11,10 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-config.font_size = 10.0
+config.font_size = 12.0
 
 -- Color scheme:
--- config.color_scheme = 'AdventureTime'
+-- config.color_scheme = 'Solarized Light (Gogh)'
 
 config.colors = {
     -- Default text color
@@ -33,7 +33,8 @@ config.colors = {
 
 config.cursor_blink_rate = 800
 
-config.window_background_opacity = 0.75
+-- config.window_background_opacity = 0.75
+config.window_background_opacity = 1.0
 
 -- Temporary fix for crashing when multiple windows opened. See https://github.com/wez/wezterm/issues/5103
 config.front_end = 'WebGpu'
