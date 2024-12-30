@@ -3,4 +3,6 @@ require('setup')       -- generic Neovim setup
 require('treesitter')  -- treesitter
 require('lsp')         -- Language servers
 require('completion')  -- Set up tab completion
-require('heirline')    -- Set up statusbar
+-- Plugins --
+require('plugins.heirline')    -- Set up statusbar
+require('plugins.gitsigns')    -- Set up git

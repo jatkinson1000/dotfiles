@@ -29,16 +29,19 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug('neomutt/neomutt.vim')     -- neomutt
 
-Plug('airblade/vim-gitgutter')  -- Git-gutter
+Plug('lewis6991/gitsigns.nvim')  -- GitSigns (Replaces vim Git-gutter)
 
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})  -- TreeSitter
 
-Plug('rebelot/heirline.nvim')   -- Heirline for status line
+Plug 'rebelot/heirline.nvim'    -- Heirline for status line
 
 Plug 'github/copilot.vim'
 Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'CopilotC-Nvim/CopilotChat.nvim'
+
+Plug 'nvim-tree/nvim-web-devicons'  -- Get icons in neovim. Always load last
+-- Plug 'ryanoasis/vim-devicons'  -- Get icons in vim. Always load last
 
 vim.call('plug#end')
 vim.opt.filetype = 'on'
