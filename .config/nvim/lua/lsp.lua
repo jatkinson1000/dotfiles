@@ -9,7 +9,10 @@ lspconfig.lua_ls.setup {
   capabilities = capabilities
 }
 lspconfig.rust_analyzer.setup {
-  capabilities = capabilities
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+      vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+  end
 }
 -- lspconfig.fortls.setup {}
 require('lsp/clangd')
