@@ -5,9 +5,6 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Setup various different LSPs.
 -- Longer configs are stored in their own file under lsp/ and loaded with `require()`
-lspconfig.pyright.setup {
-  capabilities = capabilities
-}
 lspconfig.lua_ls.setup {
   capabilities = capabilities
 }
@@ -17,6 +14,8 @@ lspconfig.rust_analyzer.setup {
 -- lspconfig.fortls.setup {}
 require('lsp/clangd')
 require('lsp/mutt')
+require('lsp/ruff')
+require('lsp/pyright')
 
 
 -- Global mappings.

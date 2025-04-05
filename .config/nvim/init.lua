@@ -7,5 +7,3 @@ require('plugins.heirline')    -- Set up statusbar
 require('plugins.gitsigns')    -- Set up git
 require('plugins.treesitter')  -- Set up treesitter
 require('plugins.copilot')     -- Set up copilot
--- LSP --
-require('lsp.clangd')    -- clang lsp settings

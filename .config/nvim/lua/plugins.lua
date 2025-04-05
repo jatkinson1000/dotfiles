@@ -11,6 +11,7 @@ end
 
 
 -- Set a list of desired plugins --
+vim.opt.filetype = 'off'
 local Plug = vim.fn['plug#']     -- Shorthand for plug command
 vim.call('plug#begin', data_dir .. '/plugged')
 
@@ -44,6 +45,7 @@ Plug 'nvim-tree/nvim-web-devicons'  -- Get icons in neovim. Always load last
 -- Plug 'ryanoasis/vim-devicons'  -- Get icons in vim. Always load last
 
 vim.call('plug#end')
+vim.opt.filetype = 'on'
 
 
 -- Set up autocommand to install missing plugins after loading config and entering vim--
