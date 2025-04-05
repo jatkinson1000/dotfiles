@@ -1,10 +1,20 @@
 -- LANGUAGE SERVERS --
 local lspconfig = require('lspconfig')
 
-lspconfig.fortls.setup{cmd={"fortls", "--notify_init", "--hover_signature", "--hover_language=fortran", "--use_signature_help"}}
-lspconfig.pyright.setup {}
-lspconfig.lua_ls.setup {}
+
+-- Setup various different LSPs.
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- Longer configs are stored in their own file under lsp/ and loaded with `require()`
+-- lspconfig.fortls.setup {}
+lspconfig.pyright.setup {
+  capabilities = capabilities
+}
+lspconfig.lua_ls.setup {
+  capabilities = capabilities
+}
 lspconfig.rust_analyzer.setup({})
+require('lsp/clangd')
+
 
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = { "muttrc*", "neomuttrc*", "*.mutt" },
