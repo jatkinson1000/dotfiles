@@ -1,30 +1,23 @@
 -- LANGUAGE SERVERS --
 local lspconfig = require('lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 
 -- Setup various different LSPs.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Longer configs are stored in their own file under lsp/ and loaded with `require()`
--- lspconfig.fortls.setup {}
 lspconfig.pyright.setup {
   capabilities = capabilities
 }
 lspconfig.lua_ls.setup {
   capabilities = capabilities
 }
-lspconfig.rust_analyzer.setup({})
+lspconfig.rust_analyzer.setup {
+  capabilities = capabilities
+}
+-- lspconfig.fortls.setup {}
 require('lsp/clangd')
+require('lsp/mutt')
 
-
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "muttrc*", "neomuttrc*", "*.mutt" },
-  callback = function()
-    vim.lsp.start({
-      name = "mutt",
-      cmd = { "mutt-language-server" }
-    })
-  end,
-})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
