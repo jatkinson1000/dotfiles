@@ -5,10 +5,5 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('lspconfig').ruff.setup({
-  init_options = {
-    settings = {
-      -- Ruff language server settings go here
-    }
-  },
   capabilities = capabilities,
 })
