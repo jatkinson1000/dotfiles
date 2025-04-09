@@ -54,6 +54,9 @@ vim.api.nvim_create_autocmd('VimEnter', {
   command = "if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | source $MYVIMRC"
 })
 
+-- Load any colorschemes that come from a plugin
+-- vim.cmd("colorscheme kanagawa-wave") -- set colorscheme
+vim.cmd("colorscheme carbonfox")     -- set colorscheme
 
 -- Auto-update vim plug and plugins. Prefer to execute these manually for now.
 -- Check for and apply any updates to vim-plug (NB slows startup.) --
