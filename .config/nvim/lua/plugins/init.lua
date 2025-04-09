@@ -34,7 +34,8 @@ Plug 'hrsh7th/vim-vsnip'           -- Snippet engine
 Plug 'neomutt/neomutt.vim'      -- neomutt
 
 -- Git Integration
-Plug 'lewis6991/gitsigns.nvim'  -- GitSigns (Replaces vim Git-gutter)
+Plug 'lewis6991/gitsigns.nvim'  -- GitSigns (Replaces vim Git-gutter from vim)
+-- Dependency of heirline
 
 -- Treesitter
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })  -- TreeSitter
@@ -46,8 +47,8 @@ Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug('CopilotC-Nvim/CopilotChat.nvim', {['branch'] = 'main'})
 
-Plug 'nvim-tree/nvim-web-devicons'  -- Get icons in neovim. Always load last
--- Plug 'ryanoasis/vim-devicons'  -- Get icons in vim. Always load last
+Plug 'nvim-tree/nvim-web-devicons'  -- Get icons in neovim. Always load last.
+-- Dependency of heirline.
 
 vim.call('plug#end')
 
