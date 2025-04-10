@@ -34,7 +34,7 @@ end
 -- lspconfig.fortls.setup {}
 require("lsp.rust")(capabilities, on_attach)
 require("lsp.lua_ls")(capabilities, on_attach)
-require('lsp.clangd')
+require('lsp.clangd')(capabilities, on_attach)
 require('lsp.mutt')
 require('lsp.ruff')(capabilities, on_attach)
 require('lsp.pyright')(capabilities, on_attach)
