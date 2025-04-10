@@ -4,19 +4,18 @@
 local cmp = require'cmp'
 
 cmp.setup({
+  -- REQUIRED - specify a snippet engine. I use vsnip. luasnip, snippy etc. are others
   snippet = {
-    -- REQUIRED - you must specify a snippet engine
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-      -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-      -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+      vim.fn["vsnip#anonymous"](args.body)
     end,
   },
+  -- Set up window appearance
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
+  -- Set up keymappings associated with completion
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -27,12 +26,22 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'vsnip' }, -- For vsnip users.
-    -- { name = 'luasnip' }, -- For luasnip users.
-    -- { name = 'ultisnips' }, -- For ultisnips users.
-    -- { name = 'snippy' }, -- For snippy users.
   }, {
     { name = 'buffer' },
-  })
+  }),
+  -- Define how completion items appear in the menu
+  formatting = {
+    format = function(entry, vim_item)
+      -- Customize the display of completion items
+      vim_item.menu = ({
+        nvim_lsp = "[LSP]",
+        vsnip = "[Snippet]",
+        buffer = "[Buffer]",
+        path = "[Path]",
+      })[entry.source.name]
+      return vim_item
+    end,
+  },
 })
 
 -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
