@@ -6,4 +6,5 @@ require('plugins')        -- vim-plug config and required plugins
 
 require('lsp')         -- Language servers
 
-require('completion')  -- Set up tab completion
+require('core.completion')   -- Customise completion. Loaded after plugins.
+
