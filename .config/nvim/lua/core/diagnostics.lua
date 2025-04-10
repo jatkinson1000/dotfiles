@@ -13,3 +13,10 @@ vim.diagnostic.config({
   update_in_insert = false, -- Update whilst writing?
   severity_sort = true,     -- Sort Error-Warning-Hint-Info
 })
+
+-- Configure the appearance of floating boxes
+vim.diagnostic.config({
+  float = {
+    border = "rounded",
+  },
+})
