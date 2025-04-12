@@ -40,4 +40,4 @@ map("n", "<leader>sp", ":set spell!<CR>", opts) -- Toggle spellcheck
 -- Plugin specific keymappings
 --
 -- tree file manager
-map("n", "<leader>f", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
+map("n", "<leader>t", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
