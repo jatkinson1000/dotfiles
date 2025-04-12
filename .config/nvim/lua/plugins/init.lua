@@ -42,6 +42,8 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })  -- TreeSitter
 
 Plug 'rebelot/heirline.nvim'    -- Heirline for status line
 
+Plug 'nvim-tree/nvim-tree.lua'
+
 Plug 'github/copilot.vim'
 -- Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
@@ -70,4 +72,5 @@ vim.cmd("colorscheme carbonfox")     -- set colorscheme
 require('plugins.heirline')    -- Set up statusbar
 require('plugins.gitsigns')    -- Set up git
 require('plugins.treesitter')  -- Set up treesitter
+require('plugins.tree')        -- Set up tree file browser
 require('plugins.copilot')     -- Set up copilot

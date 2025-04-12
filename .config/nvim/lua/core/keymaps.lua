@@ -2,7 +2,7 @@
 
 -- CHEATSHEET --
 -- vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
--- 
+--
 -- - **`mode`**: The mode in which the mapping applies. Common modes include:
 --     - `"n"`: Normal mode
 --     - `"i"`: Insert mode
@@ -29,12 +29,15 @@ map("n", "<C-j>", "<C-w>j", opts) -- Move to the window below
 map("n", "<C-k>", "<C-w>k", opts) -- Move to the window above
 
 -- Buffer navigation
-map("n", "<leader>bn", ":bnext<CR>", opts) -- Go to the next buffer
+map("n", "<leader>bn", ":bnext<CR>", opts)     -- Go to the next buffer
 map("n", "<leader>bp", ":bprevious<CR>", opts) -- Go to tme previous buffer
-map("n", "<leader>bd", ":bdelete<CR>", opts) -- Delete the current buffer
+map("n", "<leader>bd", ":bdelete<CR>", opts)   -- Delete the current buffer
 
 -- Appearance
 map("n", "<leader>h", ":nohlsearch<CR>", opts)  -- Clear search highlights
 map("n", "<leader>sp", ":set spell!<CR>", opts) -- Toggle spellcheck
 
 -- Plugin specific keymappings
+--
+-- tree file manager
+map("n", "<leader>f", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
