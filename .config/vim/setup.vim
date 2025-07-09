@@ -5,7 +5,11 @@ set nocompatible       " disable compatibility to old-time vi
 " MOUSE "
 set mouse=a
 
-set clipboard=unnamedplus
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
 
 " APPEARANCE "
 set cursorline        " highlight current cursor line
