@@ -47,5 +47,3 @@ keymap("<leader>sp", ":set spell!<CR>") -- Toggle spellcheck
 
 -- Plugin specific keymappings
 --
--- tree file manager
-keymap("<leader>t", ":NvimTreeToggle<cr>")
