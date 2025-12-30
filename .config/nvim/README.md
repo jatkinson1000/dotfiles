@@ -11,6 +11,7 @@
 │   │   ├── opts.lua
 │   │   ├── keymaps.lua
 │   │   └── lazy.lua
+│   ├── utils.lua
 │   └── plugins
 │       └── colour.lua
 └── README.md
@@ -19,6 +20,10 @@
 #### init.lua
 
 An overhead directory that loads other files (modules) using lua's `require()`
+
+#### utils.lua
+
+A library of lua utilities to be used elsewhere in the setup.
 
 #### lua/core/
 

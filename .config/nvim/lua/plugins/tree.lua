@@ -13,9 +13,7 @@ return {
       vim.g.loaded_netrwPlugin = 1
 
       -- Keymaps
-      vim.keymap.set(
-        "n", "<leader>t", ":NvimTreeToggle<cr>", { noremap = true, silent = true }
-      )
+      require('utils').keymap("<leader>t", ":NvimTreeToggle<cr>")
     end,
   },
 }
