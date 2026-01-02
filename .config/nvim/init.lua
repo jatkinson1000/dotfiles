@@ -5,3 +5,5 @@ require("core.filetypes")
 require("core.autocommands")
 
 require("core.lazy")
+
+require("core.lsp")
