@@ -9,7 +9,7 @@ return {
       -- 'hrsh7th/cmp-cmdline',    -- Cmdline completion source  
       'hrsh7th/vim-vsnip',      -- Snippet engine  
       'hrsh7th/cmp-vsnip',
-      'neovim/nvim-lspconfig',  -- LSP configuration  
+      -- 'neovim/nvim-lspconfig',  -- LSP configuration no longer required in nvim 12.x
     },
     config = function()
       local cmp = require('cmp')

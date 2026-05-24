@@ -13,6 +13,14 @@ local options = {
   linebreak = true,               -- Don't split words when wrapping
   breakindent = false,            -- Apply indentation to wrapped lines?
   signcolumn = "yes",             -- Show sign column?
+  -- -- Folding -- -- 
+  foldmethod = "expr",
+  foldexpr = "v:lua.vim.treesitter.foldexpr()",
+  foldcolumn = "auto:2",
+  foldlevel = 99,
+  foldlevelstart = 99,
+  foldnestmax = 4,
+
 
   -- -- -- COLOURSCHEMES -- -- --
   termguicolors = true,           -- Better 24-bit colors
