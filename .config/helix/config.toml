@@ -1,0 +1,67 @@
+# Helix configuration — equivalent of ~/.config/nvim (core.opts, keymaps, heirline)
+#
+# Two files configure Helix:
+#   ~/.config/helix/config.toml    <- this file: editor behaviour + keymaps
+#   ~/.config/helix/languages.toml <- language servers, indentation, filetypes
+#
+# Docs: `hx --tutor` inside Helix, or https://docs.helix-editor.com
+
+# --- colours ---------------------------------------------------------
+# Colour scheme. Helix ships nightfox + carbonfox ports out of the box.
+theme = "carbonfox"
+
+# --- editor options (core/opts.lua) ----------------------------------
+[editor]
+true-color        = true        # termguicolors
+mouse             = true        # mouse = "a"
+line-number       = "relative"  # number + relativenumber
+cursorline        = true        # cursorline
+rulers            = [88]        # colorcolumn = "88"
+scrolloff         = 4           # scrolloff = 4  (no sidescrolloff equivalent exists)
+auto-format       = false       # your nvim config doesn't format-on-save; use :format manually
+color-modes       = true        # colour the statusline mode block (like heirline ViMode)
+bufferline        = "multiple"  # tabline shown only with >1 buffer (your heirline autocmd logic)
+
+[editor.search]
+smart-case = true               # ~ ignorecase: case-insensitive unless the query has capitals
+
+[editor.soft-wrap]
+enable = true                   # wrap = true; Helix wraps at word boundaries like linebreak
+
+[editor.indent-guides]
+render = false                  # no indent-guide plugin in your nvim config
+
+[editor.lsp]
+display-inlay-hints = false     # matches your nvim (inlay hints not enabled there)
+
+# --- statusline / tabline (plugins/heirline.lua) ---------------------
+# Your layout: [mode] [git] [filename+]               [line:col %]
+# Elements are fixed (no Lua components); `version-control` shows the branch.
+[editor.statusline]
+left  = ["mode", "version-control", "file-name", "file-modification-indicator"]
+center = []
+right = ["position", "position-percentage"]
+# Add "diagnostics" to `right` if you ever want counts in the bar;
+# they already show in the gutter + underlined in the text (virtual_text=false in nvim == Helix default).
+
+# --- keymaps ---------------------------------------------------------
+# Most of your <leader> bindings exist natively in Helix under other keys:
+#   <leader>bn / <leader>bp  ->  gn / gp            (next/previous buffer)
+#   <leader>bd               ->  :buffer-close      (or :bc)
+#   <leader>h / Esc nohlsearch -> not needed; search highlights don't stack up in Helix
+#   <leader>ds / <leader>q   ->  Space-d            (diagnostics picker)
+#   K                        ->  Space-k            (hover docs)
+#   <Esc>                    ->  collapses multi-cursor selections (keeps its Helix meaning)
+#
+# The one *behavioural* difference worth remapping: your nvim uses the system
+# clipboard for everything (clipboard = "unnamedplus"), while Helix defaults
+# to its own register with Space-y / Space-p for the clipboard. This makes
+# y/p behave like nvim's unnamedplus:
+[keys.normal]
+y = "yank_to_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+
+[keys.select]
+y = "yank_to_clipboard"
+p = "replace_selections_with_clipboard"

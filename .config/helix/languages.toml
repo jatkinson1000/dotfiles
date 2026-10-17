@@ -1,0 +1,75 @@
+# Helix language configuration — equivalent of lua/lsp/*.lua and core/filetypes.lua
+# Check what Helix sees with: hx --health <language>
+
+# === Python (lua/lsp/python.lua): ruff for lint/imports + pyright for types ===
+# NOTE: `ruff` is not currently in your $PATH (pyright, rust-analyzer, clangd,
+# fortls all are). Install it globally or inside your venv, e.g. `brew install ruff`.
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.pyright.config.pyright]
+disableOrganizeImports = true        # using ruff's import organizer
+
+[language-server.pyright.config.python.analysis]
+ignore = ["*"]                       # exclusively use ruff for linting
+
+# === Rust (lua/lsp/rust.lua) ===
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"                   # modern form of checkOnSave = { command = "clippy" }
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"                     # modern form of cargo = { allFeatures = true }
+
+# === C/C++ (lua/lsp/clang.lua) ===
+[language-server.clangd]
+command = "clangd"
+args = ["--background-index", "--clang-tidy"]
+
+# === codebook spellchecker ===
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
+
+# === Language tweaks (tabstop/shiftwidth = 2 + core/filetypes.lua) ===
+# Helix sets indentation per language (no global tabstop), so mirror your
+# 2-space preference on the languages you use. Defaults are 4 for these.
+[[language]]
+name = "python"
+language-servers = ["ruff", "pyright"]   # Helix's default list is ty/ruff/jedi/pylsp
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "rust"
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "c"
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 2, unit = "  " }
+
+# Fortran: recognise .fypp sources (fortls is installed and detected).
+# Listing file-types replaces the defaults, so the defaults are repeated here.
+[[language]]
+name = "fortran"
+file-types = ["f", "for", "f90", "f95", "f03", "fypp"]
+indent = { tab-width = 2, unit = "  " }
+
+# HTML: also treat *.html.template as HTML (your nvim pattern match).
+[[language]]
+name = "html"
+file-types = [
+  "html", "htm", "shtml", "xhtml", "xht", "jsp", "asp", "aspx",
+  "jshtm", "volt", "rhtml", "cshtml",
+  { glob = "*.html.template" },
+]
+
+[[language]]
+name = "markdown"
+language-servers = ["codebook"]
