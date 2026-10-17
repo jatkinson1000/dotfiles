@@ -61,6 +61,8 @@
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    
+    bindsym $mod+Shift+f exec $filebrowser
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -231,11 +233,10 @@ bindsym $mod+r mode "resize"
     # Note: pass the final command to swaymsg so that the resulting window can be opened
     # on the original workspace that the command was run on.
     # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-    set $menu bemenu-run --no-exec -H 25 \
-              --tf '#00FF41' --ff '#00FF41' --cf '#00FF41' \
-              --nf '#00FF41' --af '#CCCCCC' --hf '#0F02D1' --hb '#00FF41' \
-              | xargs swaymsg exec --
+    set $menu rofi -show drun
 
+    # filebrowser
+    set $filebrowser rofi -show filebrowser
 
 ### Include external files
 include /etc/sway/config.d/*

@@ -1,0 +1,6 @@
+configuration {
+  modi: "window,drun,ssh,combi,filebrowser";
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+@theme "blue"
