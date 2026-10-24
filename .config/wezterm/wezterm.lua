@@ -16,18 +16,19 @@ config.font_size = 10.0
 
 -- Color scheme:
 -- config.color_scheme = 'AdventureTime'
+config.color_scheme = 'carbonfox'
 
 config.colors = {
     -- Default text color
-    foreground = '#00FF00',
+    foreground = '#44FF44',
     -- Default background color
     background = 'black',
 
-    cursor_bg = '#00FF00',
+    cursor_bg = '#44FF44',
     cursor_fg = 'black',
 
     selection_fg = 'black',
-    selection_bg = '#00ff00',
+    selection_bg = '#44ff44',
 
     split = '#444444',
 }
