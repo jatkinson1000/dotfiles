@@ -16,7 +16,7 @@ export SAVEHIST=$HISTSIZE
 export HISTCONTROL=ignoredups
 
 # Set default programs
-export VISUAL=/usr/bin/nvim
+export VISUAL=/usr/bin/helix
 export EDITOR="$VISUAL"
 export BROWSER=/usr/bin/librewolf
 
