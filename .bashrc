@@ -41,6 +41,9 @@ $(complete -p git | sed 's/ git//') dotfiles
 # Other machine specific aliases
 alias wlsunset='wlsunset -l 52.2 -L 0.1 -t 2000 &'
 
+# openSUSE .bashrc default alias fetching
+test -s ~/.alias && . ~/.alias || true
+
 # -- FUNCTIONS --
 # Get non-password value from pass (adapted from dbrumbaugh)
 # e.g. `show-pass-value github username`
