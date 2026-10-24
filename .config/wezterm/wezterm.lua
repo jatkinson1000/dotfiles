@@ -12,7 +12,7 @@ end
 
 -- This is where you actually apply your config choices
 config.font = wezterm.font 'Maple Mono NF'
-config.font_size = 10.0
+config.font_size = 14.0
 
 -- Color scheme:
 -- config.color_scheme = 'AdventureTime'
