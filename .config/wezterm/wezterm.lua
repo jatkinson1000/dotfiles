@@ -39,6 +39,8 @@ config.window_background_opacity = 0.75
 
 -- Temporary fix for crashing when multiple windows opened. See https://github.com/wez/wezterm/issues/5103
 config.front_end = 'WebGpu'
+-- ix for failing to run on multiple screens, lauching wezterm GUI and crashing. See https://github.com/wezterm/wezterm/issues/3121
+config.enable_wayland = false
 
 -- and finally, return the configuration to wezterm
 return config
